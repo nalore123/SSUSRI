@@ -3,6 +3,6 @@ from .models import *
 
 # Register your models here.
 
-model_list = [Novosti, NovostiSlike, Natjecanja]
+model_list = [Novosti, NovostiSlike, Natjecanja, Galerija, GalerijaSlike]
 
 admin.site.register(model_list)

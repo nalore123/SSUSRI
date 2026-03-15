@@ -12,3 +12,7 @@ class NovostiView(CreateAPIView):
 class NatjecanjaView(CreateAPIView):
     parser_classes = [MultiPartParser, FormParser]
     serializer_class = NatjecanjaSerializer
+
+class GalerijaView(CreateAPIView):
+    parser_classes = [MultiPartParser, FormParser]
+    serializer_class = GalerijaSerializer

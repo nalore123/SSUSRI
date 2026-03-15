@@ -31,3 +31,14 @@ class Natjecanja(models.Model):
     vrsta_natjecanja=models.CharField(max_length=120)
     def __str__(self):
         return self.vrsta_natjecanja
+
+class Galerija(models.Model):
+    naziv = models.CharField(max_length=200)
+    def __str__(self):
+        return self.naziv
+
+class GalerijaSlike(models.Model):
+    galerija = models.ForeignKey(Galerija, on_delete=models.CASCADE, related_name="images")
+    slika = models.ImageField(upload_to="galerija/")
+    def __str__(self):
+        return self.galerija.naziv

@@ -5,5 +5,6 @@ app_name = 'main'
 
 urlpatterns = [
     path("novosti/", NovostiView.as_view()),
-    path("natjecanja/", NatjecanjaView.as_view())
+    path("natjecanja/", NatjecanjaView.as_view()),
+    path("galerija/", GalerijaView.as_view())
 ]
