@@ -1,18 +1,18 @@
 from django.shortcuts import render
-from rest_framework.generics import CreateAPIView
-from rest_framework.parsers import MultiPartParser, FormParser
 from main.models import *
 from main.serializers import *
+from rest_framework.viewsets import ModelViewSet
+
 # Create your views here.
 
-class NovostiView(CreateAPIView):
-    parser_classes = [MultiPartParser, FormParser]
+class NovostiView(ModelViewSet):
+    queryset = Novosti.objects.all()
     serializer_class = NovostiSerializer
 
-class NatjecanjaView(CreateAPIView):
-    parser_classes = [MultiPartParser, FormParser]
+class NatjecanjaView(ModelViewSet):
+    queryset = Natjecanja.objects.all()
     serializer_class = NatjecanjaSerializer
 
-class GalerijaView(CreateAPIView):
-    parser_classes = [MultiPartParser, FormParser]
+class GalerijaView(ModelViewSet):
+    queryset = Galerija.objects.all()
     serializer_class = GalerijaSerializer
